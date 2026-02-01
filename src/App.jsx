@@ -4,7 +4,7 @@ import Results from "./components/Results";
 function App() {
   return (
     <div className="container">
-      <h1>Quiz Vui Lập Trình</h1>
+      <h1>Programming Quiz</h1>
       <Quiz />
     </div>
   );

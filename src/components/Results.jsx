@@ -3,14 +3,14 @@ import React from 'react'
 const Results = ({ score, totalQuestionNum, restartQuiz, rewatchQuiz }) => {
   return (
     <div>
-      <h2>Kết Quả</h2>
+      <h2>Results</h2>
       <p className="result">
-        Bạn trả lời đúng: {score}/{totalQuestionNum} Câu 👏 👏 👏{' '}
+        You got {score}/{totalQuestionNum} questions correct 👏 👏 👏{' '}
       </p>
       <div className="resultButtonsContainer">
-        <button className="result-button" onClick={rewatchQuiz}>Xem Lại</button>
+        <button className="result-button" onClick={rewatchQuiz}>Review</button>
         <button className="result-button" onClick={restartQuiz}>
-          Làm Lại
+          Restart
         </button>
       </div>
     </div>

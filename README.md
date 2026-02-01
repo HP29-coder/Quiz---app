@@ -1,55 +1,55 @@
-# Quiz Vui Lập Trình
+# Programming Quiz
 
-Ứng dụng quiz lập trình web được xây dựng bằng React + Vite. Gồm 12 câu hỏi về JavaScript, HTML và thuật toán.
+A programming quiz web app built with React + Vite. Features 12 questions about JavaScript, HTML, and algorithms.
 
-## Tính năng
+## Features
 
-- **12 câu hỏi** về lập trình: JavaScript, kiểu dữ liệu, thuật toán, cấu trúc dữ liệu, HTML...
-- **Chọn đáp án** và nhận phản hồi ngay (đúng/sai)
-- **Điều hướng** giữa các câu: nút Quay Lại, Kế Tiếp
-- **Màn hình kết quả** hiển thị số câu trả lời đúng sau khi hoàn thành
-- **Xem Lại**: xem lại các câu đã làm (giữ nguyên đáp án)
-- **Làm Lại**: làm lại quiz từ đầu (reset điểm và đáp án)
+- **12 questions** about programming: JavaScript, data types, algorithms, data structures, HTML...
+- **Select answers** and get instant feedback (correct/incorrect)
+- **Navigate** between questions: Back and Next buttons
+- **Results screen** displays the number of correct answers after completion
+- **Review**: Go back through answered questions (keeps your answers)
+- **Restart**: Take the quiz again from the beginning (resets score and answers)
 
-## Công nghệ
+## Tech Stack
 
 - React 19
 - Vite 7
 - ESLint
 
-## Cài đặt & Chạy
+## Installation & Running
 
 ```bash
-# Cài đặt dependencies
+# Install dependencies
 npm install
 
-# Chạy chế độ phát triển
+# Run development mode
 npm run dev
 
-# Build cho production
+# Build for production
 npm run build
 
-# Xem bản preview sau khi build
+# Preview the build
 npm run preview
 ```
 
-## Cấu trúc dự án
+## Project Structure
 
 ```
 src/
-├── App.jsx          # Component chính, hiển thị tiêu đề và Quiz
+├── App.jsx          # Main component, displays title and Quiz
 ├── main.jsx         # Entry point
-├── index.css        # Style toàn cục
+├── index.css        # Global styles
 └── components/
-    ├── Quiz.jsx     # Logic quiz, câu hỏi, điều hướng
-    └── Results.jsx  # Màn hình kết quả, nút Xem Lại / Làm Lại
+    ├── Quiz.jsx     # Quiz logic, questions, navigation
+    └── Results.jsx  # Results screen, Review / Restart buttons
 ```
 
 ## Scripts
 
-| Script           | Mô tả                     |
-|------------------|---------------------------|
-| `npm run dev`    | Chạy dev server (HMR)     |
-| `npm run build`  | Build production          |
-| `npm run preview`| Xem bản build             |
-| `npm run lint`   | Chạy ESLint               |
+| Script            | Description                  |
+|-------------------|------------------------------|
+| `npm run dev`     | Run dev server (HMR)         |
+| `npm run build`   | Build for production         |
+| `npm run preview` | Preview the build            |
+| `npm run lint`    | Run ESLint                   |

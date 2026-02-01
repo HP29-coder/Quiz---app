@@ -3,42 +3,42 @@ import Results from './Results'
 
 const quizData = [
   {
-    question: 'Biến nào sau đây là hợp lệ trong JavaScript?',
+    question: 'Which of the following is a valid variable name in JavaScript?',
     options: ['1variable', '_variable', 'var-name', 'var name'],
     answer: '_variable',
   },
   {
-    question: 'Trong JavaScript, kiểu dữ liệu nào sau đây là kiểu dữ liệu nguyên thủy (primitive)?',
+    question: 'In JavaScript, which of the following is a primitive data type?',
     options: ['object', 'array', 'string', 'function'],
     answer: 'string',
   },
   {
-    question: 'Thuật toán sắp xếp nào sau đây có độ phức tạp trung bình là O(n log n)?',
+    question: 'Which sorting algorithm has an average time complexity of O(n log n)?',
     options: ['Bubble Sort', 'Insertion Sort', 'Merge Sort', 'Linear Sort'],
     answer: 'Merge Sort',
   },
   {
-    question: 'Kết quả của `typeof null` trong JavaScript là gì?',
+    question: 'What is the result of `typeof null` in JavaScript?',
     options: ["'null'", "'undefined'", "'object'", "'number'"],
     answer: "'object'",
   },
   {
-    question: 'Bộ nhớ Stack dùng để làm gì?',
+    question: 'What is the Stack memory used for?',
     options: [
-      'Lưu trữ dữ liệu dạng hàng đợi',
-      'Lưu trữ các lời gọi hàm (function calls)',
-      'Lưu ảnh',
-      'Lưu video',
+      'Storing queue-like data',
+      'Storing function calls',
+      'Storing images',
+      'Storing videos',
     ],
-    answer: 'Lưu trữ các lời gọi hàm (function calls)',
+    answer: 'Storing function calls',
   },
   {
-    question: 'Toán tử nào so sánh nghiêm ngặt giá trị và kiểu dữ liệu?',
+    question: 'Which operator strictly compares both value and data type?',
     options: ['==', '===', '!=', '='],
     answer: '===',
   },
   {
-    question: 'JSON là viết tắt của gì?',
+    question: 'What does JSON stand for?',
     options: [
       'Java Syntax Object Notation',
       'JavaScript Object Notation',
@@ -48,39 +48,39 @@ const quizData = [
     answer: 'JavaScript Object Notation',
   },
   {
-    question: 'Cấu trúc dữ liệu nào hoạt động theo nguyên tắc FIFO (First In First Out)?',
+    question: 'Which data structure operates on the FIFO (First In First Out) principle?',
     options: ['Stack', 'Queue', 'Array', 'Linked List'],
     answer: 'Queue',
   },
   {
-    question: 'Câu lệnh nào in ra nội dung trong console trình duyệt?',
+    question: 'Which statement prints content to the browser console?',
     options: ['print()', 'console.log()', 'echo()', 'show()'],
     answer: 'console.log()',
   },
   {
-    question: 'Khi bạn viết `let x;` trong JavaScript, giá trị ban đầu của x là gì?',
+    question: 'When you write `let x;` in JavaScript, what is the initial value of x?',
     options: ['null', '0', 'undefined', 'false'],
     answer: 'undefined',
   },
   {
-    question: 'HTML là gì?',
+    question: 'What is HTML?',
     options: [
-      'Ngôn ngữ lập trình để xử lý logic',
-      'Ngôn ngữ đánh dấu để tạo cấu trúc website',
-      'Framework của JavaScript',
-      'Trình duyệt web',
+      'A programming language for logic processing',
+      'A markup language for creating website structure',
+      'A JavaScript framework',
+      'A web browser',
     ],
-    answer: 'Ngôn ngữ đánh dấu để tạo cấu trúc website',
+    answer: 'A markup language for creating website structure',
   },
   {
-    question: 'Trong thuật toán, Big O dùng để đo gì?',
+    question: 'In algorithms, what does Big O notation measure?',
     options: [
-      'Tốc độ mạng',
-      'Thời gian load ảnh',
-      'Độ phức tạp của thuật toán',
-      'Dung lượng RAM máy tính',
+      'Network speed',
+      'Image loading time',
+      'Algorithm complexity',
+      'Computer RAM capacity',
     ],
-    answer: 'Độ phức tạp của thuật toán',
+    answer: 'Algorithm complexity',
   },
 ]
 
@@ -162,7 +162,7 @@ const Quiz = () => {
 
   return (
     <div>
-      <h2>Câu {currentQuestion + 1}</h2>
+      <h2>Question {currentQuestion + 1}</h2>
       <p className="question">{quizData[currentQuestion].question}</p>
 
       {quizData[currentQuestion].options.map((option, index) => (
@@ -178,9 +178,9 @@ const Quiz = () => {
 
       {optionSelected ? (
         optionSelected === quizData[currentQuestion].answer ? (
-          <p className="correct-answer">Câu trả lời của bạn chính xác</p>
+          <p className="correct-answer">Your answer is correct</p>
         ) : (
-          <p className="incorrect-answer">Câu trả lời của bạn không chính xác</p>
+          <p className="incorrect-answer">Your answer is incorrect</p>
         )
       ) : (
         ''
@@ -188,10 +188,10 @@ const Quiz = () => {
 
       <div className="nav-buttons">
         <button onClick={goBack} disabled={currentQuestion === 0}>
-          Quay Lại
+          Back
         </button>
         <button onClick={goNext} disabled={!optionSelected}>
-          {currentQuestion === quizData.length - 1 ? 'Hoàn Thành Quiz' : 'Kế Tiếp'}
+          {currentQuestion === quizData.length - 1 ? 'Complete Quiz' : 'Next'}
         </button>
       </div>
     </div>
