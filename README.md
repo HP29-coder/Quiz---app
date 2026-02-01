@@ -1,16 +1,55 @@
-# React + Vite
+# Quiz Vui Lập Trình
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ứng dụng quiz lập trình web được xây dựng bằng React + Vite. Gồm 12 câu hỏi về JavaScript, HTML và thuật toán.
 
-Currently, two official plugins are available:
+## Tính năng
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **12 câu hỏi** về lập trình: JavaScript, kiểu dữ liệu, thuật toán, cấu trúc dữ liệu, HTML...
+- **Chọn đáp án** và nhận phản hồi ngay (đúng/sai)
+- **Điều hướng** giữa các câu: nút Quay Lại, Kế Tiếp
+- **Màn hình kết quả** hiển thị số câu trả lời đúng sau khi hoàn thành
+- **Xem Lại**: xem lại các câu đã làm (giữ nguyên đáp án)
+- **Làm Lại**: làm lại quiz từ đầu (reset điểm và đáp án)
 
-## React Compiler
+## Công nghệ
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 7
+- ESLint
 
-## Expanding the ESLint configuration
+## Cài đặt & Chạy
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Cài đặt dependencies
+npm install
+
+# Chạy chế độ phát triển
+npm run dev
+
+# Build cho production
+npm run build
+
+# Xem bản preview sau khi build
+npm run preview
+```
+
+## Cấu trúc dự án
+
+```
+src/
+├── App.jsx          # Component chính, hiển thị tiêu đề và Quiz
+├── main.jsx         # Entry point
+├── index.css        # Style toàn cục
+└── components/
+    ├── Quiz.jsx     # Logic quiz, câu hỏi, điều hướng
+    └── Results.jsx  # Màn hình kết quả, nút Xem Lại / Làm Lại
+```
+
+## Scripts
+
+| Script           | Mô tả                     |
+|------------------|---------------------------|
+| `npm run dev`    | Chạy dev server (HMR)     |
+| `npm run build`  | Build production          |
+| `npm run preview`| Xem bản build             |
+| `npm run lint`   | Chạy ESLint               |
